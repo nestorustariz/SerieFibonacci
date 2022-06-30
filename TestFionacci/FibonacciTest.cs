@@ -1,5 +1,6 @@
-using Xunit;
+
 using SerieFibonacci;
+using NUnit.Framework;
 
 
 namespace TestFionacci
@@ -7,9 +8,11 @@ namespace TestFionacci
 {
     public class FibonacciTest
     {
-        [Fact]
+        [Test]
         public void FibonacciTest1()
         {
+            //Arrange
+
             var fibo = new FiboSerie();
 
             //Act
@@ -17,7 +20,7 @@ namespace TestFionacci
             var result = fibo.calculo();
 
             //Aseert
-            Assert.Equal(0,result);
+            Assert.Equals(0,result);
             
 
         }

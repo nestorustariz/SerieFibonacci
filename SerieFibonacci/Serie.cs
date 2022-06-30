@@ -1,20 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace SerieFibonacci
 {
-    public class Serie
+    public class Serie : IEnumerable<int>
     {
 
-        public long calclular(int position)
+        public IEnumerator<int> GetEnumerator()
         {
-            throw new NotImplementedException();
+            yield return 1;
+
+            for (int i = 1; true ; i++)
+            {
+                yield return i;
+            }
 
         }
 
-       
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
     }
 }
