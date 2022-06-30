@@ -25,7 +25,7 @@ namespace TestFionacci
         }
 
 
-        /*
+        
         [Test]
         public void Serie_FirstElement_IsOne()
         {
@@ -56,7 +56,7 @@ namespace TestFionacci
         }
 
 
-        */
+        
 
 
 
